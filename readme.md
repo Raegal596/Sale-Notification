@@ -1,10 +1,10 @@
 # Sale-Notification
 
-A Python application that periodically scrapes listing websites (Craigslist, Kijiji, Facebook Marketplace) for specific items matching a search query in a specified region. It sends real-time SMS notifications via Twilio whenever new listings are found.
+A Python application that periodically scrapes listing websites (Craigslist, Kijiji, Facebook Marketplace, eBay) for specific items matching a search query in a specified region. It sends real-time SMS notifications via Twilio whenever new listings are found.
 
 ## Features
 
-- **Multi-Platform Scraping**: Supports scraping Craigslist, Kijiji, and Facebook Marketplace.
+- **Multi-Platform Scraping**: Supports scraping Craigslist, Kijiji, Facebook Marketplace, and eBay.
 - **Automated Scanning**: Includes a built-in scheduler (using `schedule`) that runs the scrapers periodically (every 30 minutes).
 - **Duplicate Prevention**: Maintains a history of seen listings locally (`seen_listings.json`) to prevent sending duplicate notifications.
 - **SMS Notifications**: Integrates with Twilio to send bulk text message alerts of all newly discovered listings.

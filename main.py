@@ -5,6 +5,7 @@ import schedule
 from scrapers.craigslist import scrape_craigslist
 from scrapers.kijiji import scrape_kijiji
 from scrapers.facebook import scrape_facebook
+from scrapers.ebay import scrape_ebay
 from notifier import send_bulk_sms_notification
 
 def load_config():
@@ -62,6 +63,14 @@ def run_scrapers():
         new_listings.extend(process_results(fb_results, seen_listings))
     except Exception as e:
         print(f"Error executing Facebook scraper: {e}")
+        
+    # 4. eBay
+    try:
+        print("Scraping eBay...")
+        ebay_results = scrape_ebay(search_query, region)
+        new_listings.extend(process_results(ebay_results, seen_listings))
+    except Exception as e:
+        print(f"Error executing eBay scraper: {e}")
         
     if new_listings:
         print(f"Found {len(new_listings)} new listings in total. Sending bulk SMS...")
