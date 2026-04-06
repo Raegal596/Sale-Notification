@@ -1,5 +1,9 @@
 {
-    "SEARCH_QUERY": "Herman Miller Aeron",
-    "REGION": "Edmonton",
-    "TO_PHONE_NUMBER": "+18777804236"
+    "SEARCH_QUERIES": [
+        {
+            "query": "Herman Miller Aeron",
+            "region": "Edmonton",
+            "to_phone_number": "+18777804236"
+        }
+    ]
 }

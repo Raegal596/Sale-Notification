@@ -1,0 +1,7 @@
+beautifulsoup4
+requests
+schedule
+twilio
+python-dotenv
+playwright
+sendgrid
